@@ -29,11 +29,15 @@ function SettingsContextProvider(props) {
     const minutes = Math.floor(remainingTime / 60)
     const seconds = remainingTime % 60
     
-    return `${minutes}:${seconds}`
+    return `${minutes} : ${seconds}`
     }
 
     // clear session storage 
     const SettingsBtn = () => {
+        var ls = require('local-storage');
+
+        ls('finish_minutes', 0);
+
         setExecuting({})
         setPomodoro(0)
     }

@@ -10,10 +10,13 @@ const SetPomodoro = () => {
         active: 'work'
     })
 
+
+
     const {updateExecute} = useContext(SettingsContext)
 
     const handleChange = input => {
-        const {name, value} = input.target
+        const {name, value} = input.target 
+
         switch (name) {
             case 'work':
                 setNewTimer({
@@ -36,6 +39,15 @@ const SetPomodoro = () => {
         }
     }
     const handleSubmit = e => {
+
+        var ls = require('local-storage');
+
+        var d1 = new Date (),
+        d2 = new Date ( d1 );
+
+        ls('finish_minutes', newTimer.work);
+        ls('finish_time', d2);
+
         e.preventDefault()
         updateExecute(newTimer)
     }

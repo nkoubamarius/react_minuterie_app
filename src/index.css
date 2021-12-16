@@ -79,12 +79,13 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 15rem;
-  width: 15rem;
-  border-radius: 7.5rem;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 15rem;
   color:#efefef;
+  font-weight: 600;
   background: #efefef;
-  font-size: 3.5rem;
+  font-size: 6.5rem;
   box-shadow: 1rem 1.5rem 2rem rgba(0,0,0,0.6)
 }
 
@@ -107,7 +108,11 @@ button {
   cursor: pointer;
 }
 
-.button-wrapper button.activve {
+.value{
+  font-size: 1.3em;
+}
+
+.button-wrapper button.active {
   color: #0C0E1B;
   background-color: #C9CCEA;
   border: 1px solid #0C0E1B;
@@ -130,3 +135,4 @@ button {
   text-align: center;
   font-size: 18pt;
 }
+
